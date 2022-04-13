@@ -15,10 +15,10 @@
         <hr>
     </header>
 
-    <table>
+    <table border="1">
         <tr>
             <td>Број на оглас</td>
-            <td>
+            <td align="left">
                 <input type="number" style="width: 2em;" min="0" max="9">
                 <input type="number" style="width: 2em;" min="0" max="9">
                 /
@@ -37,12 +37,214 @@
             </td>
         </tr>
         <tr>
-            <td>
-                Реден број на работно место за кое
+            <td colspan="2">
+                Реден број на работно место за кое аплицирате
+                <textarea name="" id="" cols="30" rows="10"></textarea>
             </td>
         </tr>
 
     </table>
+    <h2>Лични податоци</h2>
+    <table border="1">
+        <tr>
+            <td>Ime i prezime</td>
+            <td colspan="3"><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Datum na ragjanje</td>
+            <td><input type="number"></td>
+            <td>
+                пол
+                <label for="M">М</label>
+                <input type="radio" id="M" name="gender">
+                <label for="Z">Ж</label>
+                <input type="radio" id="Z" name="gender">
+            </td>
+            <td>
+                Државјанин на РМ
+                <label for="citizen">Да</label>
+                <input type="radio" id="citizen" name="citizenship">
+                <label for="citizen-no">Не</label>
+                <input type="radio" id="citizen-no" name="citizenship">
+            </td>
+        </tr>
+        <tr>
+            <td>Adresa</td>
+            <td colspan="3"><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Kontakt</td>
+            <td><label for="">Telefon</label>
+                <input type="text">
+            </td>
+            <td colspan="2">
+                <label for="">e-posta</label>
+                <input type="email">
+            </td>
+        </tr>
+    </table>
+    <h2>Образование</h2>
+    <table border="1">
+        <tr>
+            <td>Образовна институција</td>
+            <td colspan="6">
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Насока на завршено образование
+            </td>
+            <td colspan="6">
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Cтепен на образование
+            </td>
+            <td>
+                <input type="checkbox">
+                <label for="">IV</label>
+            </td>
+            <td>
+                <input type="checkbox">
+                <label for="">VI</label>
+            </td>
+            <td>
+                <input type="checkbox">
+                <label for="">VII/1</label>
+            </td>
+            <td>
+                <input type="checkbox">
+                <label for="">VII/2</label>
+            </td>
+            <td>
+                <input type="checkbox">
+                <label for="">VIII</label>
+            </td>
+            <td>
+                <input type="checkbox">
+                <label for="">ЕКТС</label>
+                <input type="number" style="width: 4em;">
+                <label for="">кредити</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Просечна оценка
+            </td>
+            <td>
+                <input type="number" style="width: 4em;">
+            </td>
+
+        </tr>
+    </table>
+
+    <h2>
+        Работно искуство
+    </h2>
+    <table border="1">
+        <tr>
+            <td>Работно искуство</td>
+            <td colspan="2">
+                <input type="radio" name="experience">
+                <label for="">Да</label>
+                <input type="radio" name="experience">
+                <label for="">Не</label>
+            </td>
+        </tr>
+        <tr>
+            <td>вкупен работен стаж</td>
+            <td>
+                <input type="number" style="width: 2em;" min="0" max="60">
+                <label for="">Godini</label>
+                <input type="number" style="width: 2em;" min="0" max="11">
+                <label for="">Meseci</label>
+            </td>
+            <td>
+                Работно искуство во струката
+                <input type="number" style="width: 2em;" min="0" max="60">
+                <label for="">Godini</label>
+                <input type="number" style="width: 2em;" min="0" max="11">
+                <label for="">Meseci</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Област во која е стекнато работното искуство
+            </td>
+            <td colspan="3">
+                <input type="text">
+            </td>
+        </tr>
+    </table>
+
+    <h2>Вештини</h2>
+    <table border="1">
+        <tr>
+            <td>Познавање</td>
+            <td><input type="text" name="" id=""></td>
+        </tr>
+        <tr>
+            <td>Компјутерскивештини</td>
+            <td><input type="text" name="" id=""></td>
+        </tr>
+        <tr>
+            <td>Возачка дозвола</td>
+            <td><input type="text" name="" id=""></td>
+        </tr>
+        <tr>
+            <td>Други персонални вештини</td>
+            <td><input type="text" name="" id=""></td>
+        </tr>
+
+    </table>
+
+    <h2>изјава</h2>
+    <table border="1">
+        <tr>
+            <td>
+            <p>
+                Изјавувам под морална, материјална и кривична одговорност, дека податоците наведени во оваа пријава се
+                веродостојни и дека на барање на Управата за јавни приходи ќе доставам докази, во оригинал или копија
+                заверена кај нотар.
+                Се согласувам личните податоци наведени во пријавата да се користат исклучиво за цели на постапката на
+                вработување во Управата за јавни приходи.
+            </p>
+        </td>
+        </tr>
+        
+    </table>
+
+    <h2>податоциза подносителот на пријавата</h2>
+
+    <table border="1">
+        <tr>
+            <td>потпис</td>
+            <td>
+                <input type="text">
+            </td>
+            <td>
+<label for="">Датум на внесување</label>
+<input type="number" style="width: 2em;" min="0" max="9">
+<input type="number" style="width: 2em;" min="0" max="9">
+. 
+<input type="number" style="width: 2em;" min="0" max="9">
+<input type="number" style="width: 2em;" min="0" max="9">
+. 
+<input type="number" style="width: 2em;" min="0" max="9">
+<input type="number" style="width: 2em;" min="0" max="9">
+<input type="number" style="width: 2em;" min="0" max="9">
+<input type="number" style="width: 2em;" min="0" max="9">
+
+            </td>
+        </tr>
+    </table>
+
+    <p class="outro" style="font-size: 7px; text-align: center;">
+        Образецот е објавен на веб страницата на УЈП <a href="http://www.ujp.gov.mk/s/obrasci/opis/105">http://www.ujp.gov.mk/s/obrasci/opis/105 и важи од 17.06.2013 година</a>
+    </p>
 
 </body>
 
