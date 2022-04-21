@@ -1,0 +1,26 @@
+body {
+    font-size: 40px;
+}
+.parent {
+background-color: blue ;
+padding: 10px;
+position: relative;
+height: 5000px;
+}
+.child {
+  
+}
+
+.child_one {
+background-color: green;
+position: sticky;
+top: 0px;
+}
+
+.child_two {
+background-color: red;
+}
+
+.child_three {
+    background-color: pink;
+}

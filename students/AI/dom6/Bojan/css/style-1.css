@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul{
+    margin-top:0;
+}
+
+header{
+    width: 100%;
+    background-color: #ddd;
+}
+
+header *+* {
+    display: inline-block;
+}
+
+a{
+    display: inline-block;
+    margin: 30px;
+    padding: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: firebrick;
+    color: #ddd;
+    font-weight: 900;
+}
+
+
+
+.header__logo{
+    display: inline-block;
+    margin-right: 21em;
+    font-weight: 100;
+    text-transform: capitalize;
+}
+
+.header__content {
+    padding-left: 40px;
+    text-align: start;
+}
+.content__header-left{
+    float: left;
+    font-weight: 800;
+    margin-right: 5em;
+}
+
+.content__header-right{
+    float: right;
+}
+
+.content__paragraph{
+    font-size: 1.3em;
+    width: 20ch;
+}
+
+.featured{
+    font-weight: 100;
+    padding: 80px 150px 80px 50px;
+    background-color: #aaa;
+    width: 15ch;    
+}
+
+.dots{
+    margin-right: -16em;
+}
+
+span{
+    display: inline-block;
+    padding: .5em;
+    margin: 1em 0 0 1em;
+    background-color: #aaa;
+    border-radius: 100%;
+}
+
+.services{
+    margin: 2em 4em;
+}
+
+.service,.recent-work,.twitter{
+    display: inline-block;
+}
+
+.service{
+    padding: 91.5px;
+    aspect-ratio: 1 / 1;
+    margin: .3em;
+    background-color: #aaa;
+}
+
+
+.work{
+    margin: 2em 4em;
+}
+
+.recent-work{
+    width: 5ch;
+    padding: 100px;
+    margin: 0 .3em;
+    background-color: #aaa;
+}
+
+.twitter{
+    background-color: #aaa;
+    padding: 20px;
+    padding-left: 2em;
+    width: 710px;
+}
+
+.twitter__heading{
+    font-weight: 100;
+    text-align: start;
+
+}
+
+.list{
+    background-color: #aaa;
+}
+
+.ul__list{
+    margin: 1em 0 0 0 ;
+
+}
+
+.link{
+    display: inline-block;
+    padding: 25px;
+    margin-right: 3em;
+}
+
+.copyright{
+    display: inline-block;
+}
