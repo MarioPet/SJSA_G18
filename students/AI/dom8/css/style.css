@@ -249,6 +249,7 @@ height: 100%;
 .plans-pay {
     display: flex;
     width: 100%;
+
 }
 
 
@@ -272,7 +273,7 @@ height: 100%;
     width: 65%;
     height: 400px;
     background-color: #E6F4F0;
-}
+    }
 
 .plans_right_2 {
     display: flex;
@@ -293,6 +294,7 @@ height: 100%;
     color: white;
     padding: 25px 15px;
     white-space: nowrap;
+
 }
 
 .see_more {
