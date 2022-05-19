@@ -30,33 +30,33 @@ const books = [
 
 ]
 
-const displayBooks = (isRead) => {
-    //function display books
+// const displayBooks = (isRead) => {
+//     //function display books
 
-    const content = document.getElementById('content')
+//     const content = document.getElementById('content')
 
-    let check = document.getElementById("ulBooks")
-    if (check) {
-        check.remove()
-    }
+//     let check = document.getElementById("ulBooks")
+//     if (check) {
+//         check.remove()
+//     }
 
-    const list = document.createElement('ul')
-    list.id = 'ulBooks'
-    list.style = "padding: 0px; list-style-type: none;";
-    content.appendChild(list)
+//     const list = document.createElement('ul')
+//     list.id = 'ulBooks'
+//     list.style = "padding: 0px; list-style-type: none;";
+//     content.appendChild(list)
     
 
 
-    for (let book of books) {
-        if (isRead === book.read) {
+//     for (let book of books) {
+//         if (isRead === book.read) {
            
-            const listItem = document.createElement('li');
-            listItem.textContent = book.name
-            list.append(listItem)
-        }
-    }
+//             const listItem = document.createElement('li');
+//             listItem.textContent = book.name
+//             list.append(listItem)
+//         }
+//     }
 
-}
+// }
 
 
 function filterBooksByYear () {
@@ -78,10 +78,42 @@ function filterBooksByYear () {
 }
 
 
-const modifiedBooks = books.map((book,index) => {
+// const modifiedBooks = books.map((book,index) => {
+//     return { ...book,id: index, read:true}
+// }
+// )
+// console.log(modifiedBooks)
 
-    return { ...book,id: index, read:true}
+
+function generateList (arrayOfBooks) {
+
+
+    const content = document.getElementById('content')
+
+    let check = document.getElementById("ulBooks")
+    if (check) {
+        check.remove()
+    }
+
+    const list = document.createElement('ul')
+    list.id = 'ulBooks'
+    list.style = "padding: 0px; list-style-type: none;";
+    content.appendChild(list)
+    
+
+
+    for (let book of arrayOfBooks) {
+        if (isRead === book.read) {
+           
+            const listItem = document.createElement('li');
+            listItem.textContent = `${book.name} ${book.year} by ${book.author}`
+            list.append(listItem)
+        }
+    }
+
 }
-)
 
-console.log(modifiedBooks)
+
+const displayBooks = (isRead)=> {
+    generateList(books.filter((book) => book.read === isRead ? true : false))
+}
