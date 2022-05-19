@@ -48,7 +48,7 @@ function faktoriel(n) {
     for (let i = 1; i <= n; i++) {
         factorial = factorial * i;
     }
-    console.log(`3. Faktoriel od ${n} e ${factorial}`+'\n')
+    console.log(`3. Faktoriel od ${n} e ${factorial}` + '\n')
 }
 
 faktoriel(5)
@@ -66,7 +66,7 @@ function LengthOfArrays(array) {
         newArr[index] = array[index].length
 
     }
-    console.log('4. ',newArr + ' se dolzinite na nizite koi se lementi vo: ', array+'\n')
+    console.log('4. ', newArr + ' se dolzinite na nizite koi se lementi vo: ', array + '\n')
 }
 
 LengthOfArrays(input2)
@@ -77,7 +77,47 @@ function Initials(nameSurname) {
     let initials = arrStrings.map(arrStrings => {
         return arrStrings[0]
     })
-    console.log(initials)
+    console.log('1.',initials)
 }
 
 Initials('Aleksandar Ilijevski Ilijevski')
+
+console.log('Bonus-------------------')
+
+const strings = [" avengers", "   captain_america", "ironman   ", " black panther   "]
+
+function CleanJunkSpace(array, option) {
+    const cleanJunkSpace = array.map(array => array.trim())
+    switch (option) {
+
+        case 1: {
+            console.log('bonus 1:')
+            console.log(cleanJunkSpace)
+            break;
+        }
+        case 2: {
+            return cleanJunkSpace
+        }
+    }
+}
+
+CleanJunkSpace(strings,1)
+
+function TempCovert(temperatures) {
+    const temeraturesInCelsius = temperatures.map(temperatures => ((5 * (temperatures - 32)) / 9))
+
+    console.log(temeraturesInCelsius)
+}
+
+let farenheit = [88, 95, 100, -4, -1, 1, 32, 50]
+console.log('bonus 2')
+TempCovert(farenheit)
+
+
+function DashedStrings(array) {
+    let newArray = CleanJunkSpace(array, 2)
+    newArray = newArray.join('-')
+    console.log(newArray)
+}
+console.log('bonus 3')
+DashedStrings(strings)
