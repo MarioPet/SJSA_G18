@@ -34,45 +34,70 @@ function get_usable_user_data(data) {
 
         arrayAddress = (Object.values(data[i].address))
         userAddress = (arrayAddress[2] + ' City, ' + arrayAddress[0] + ' street, ' + arrayAddress[1])
-    
+
         userName = data[i].name
         userEmail = data[i].email
-        userWebsite = data[i].website     
-        array[i] = [userName,userAddress,userEmail,userWebsite]
+        userWebsite = data[i].website
+        array[i] = [userName, userAddress, userEmail, userWebsite]
 
-        
-        
+
+
     }
     console.log(array)
     return array
 }
-    //Kreiraj karta za:
-    //ime
-    //ptrximr
-    //email
-    //website
-    //adresa na ziveenje
+//Kreiraj karta za:
+//ime
+//ptrximr
+//email
+//website
+//adresa na ziveenje
 
 
-    //mi treba data[x].adress
+//mi treba data[x].adress
 
 
-    function generateHTMLElementsForUserData (data) {
-        var htmlContainer = document.getElementById("container")
-        var htmlCard = document.getElementById('card')
-        var newCard = document.createElement('div.card')
-        
+function generateHTMLElementsForUserData(data) {
+    var htmlContainer = document.getElementById("container")
+    //const htmlCard = document.getElementById('card')
 
-        for (let c = 0; c < data[0].length; c++) {
-            htmlContainer.append(document.createElement('div.card'))
-            console.log(c)
-        }
 
-        
+
+    for (let c = 0; c < data.length; c++) {
+        //creatind the cards
+        var newCard = document.createElement('div')
+        newCard.className = 'card'
+        htmlContainer.append(newCard)
+        console.log(c)
+
+        //seting name of user on card
         var htmlNamePara = document.createElement("p")
-        htmlNamePara.innerText = data[0]
-        htmlCard.appendChild(htmlNamePara)
+        htmlNamePara.className = 'NameClass'
+        htmlNamePara.innerText = data[c][0]
+        newCard.append(htmlNamePara)
+
+        //setting mail
+        var htmlNamePara = document.createElement("p")
+        htmlNamePara.className = 'MailClass'
+        htmlNamePara.innerText = data[c][2]
+        newCard.append(htmlNamePara)
+
+        //seting address info on card
+        var htmlAddressPara = document.createElement("p")
+        htmlAddressPara.className = 'AddressClass'
+        htmlAddressPara.innerText = data[c][1]
+        newCard.append(htmlAddressPara)
+
+        //seting website
+        var htmlNamePara = document.createElement("p")
+        htmlNamePara.className = 'WebsiteClass'
+        htmlNamePara.innerHTML = "<a href='" + 'https://www.' + data[c][3] + "'>" + data[c][3] + "</a>"
+        newCard.append(htmlNamePara)
     }
+
+
+
+}
 
 
 
